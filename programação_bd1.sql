@@ -22,8 +22,6 @@ SELECT repeticao, ROUND(valor_medido) FROM medicoes_experimento;
 -- 2.1 Aplicando função de agregação, exibindo media dos valores de uma coluna (valor_medido)
 SELECT AVG(valor_medido) FROM medicoes_experimento;
 
-SELECT sujeito, AVG(valor_medido) FROM medicoes_experimento GROUP BY sujeito;
-
 -- 2.2 Apague a tabela
 drop table medicoes_experimento;
 
@@ -34,6 +32,7 @@ valor_medido DECIMAL (6,4),
 sujeito CHAR(1)
 );
 
+SELECT sujeito, AVG(valor_medido) FROM medicoes_experimento GROUP BY sujeito;
 
 
 
